@@ -1,0 +1,4 @@
+grpcio-tools==1.41.1
+grpcio==1.41.1
+protobuf==3.19.1; python_version >= "3.5"
+six==1.16.0; python_version >= "2.7" and python_full_version < "3.0.0" or python_full_version >= "3.3.0"
