@@ -20,6 +20,28 @@ services:
         image: server
         networks:
             - microservices
+        ports:
+            - 50051:50051
+            
+    envoy:
+        build: 
+            context: envoy
+        networks:
+            - microservices
+        ports:
+            - 8080:8080
+            - 9901:9901
+        # depends_on: 
+        #     - todo
+
+    client:
+        build:
+            context: client
+        networks:
+            - microservices
+        ports:
+            - 8081:80
+
 
 networks:
     microservices:
